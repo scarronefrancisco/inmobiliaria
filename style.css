@@ -330,3 +330,260 @@ body {
     color: #aaa;
   }
   
+
+  /* Parte 9: Estilos base */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Tipografía general */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Enlaces */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Títulos */
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #111;
+  }
+  
+  /* Contenedor general */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+
+  /* Parte 10: Navegación responsiva */
+
+/* Oculta el menú en pantallas chicas y muestra ícono de menú */
+@media (max-width: 768px) {
+    .main-nav ul {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 10px 0;
+        z-index: 100;
+      }
+      
+      .main-nav ul.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      
+  
+    .menu-toggle {
+      display: block;
+      color: #333;
+    }
+  
+    .main-nav ul li {
+      padding: 10px 20px;
+      text-align: right;
+    }
+  
+    .main-nav ul li a {
+      font-weight: 500;
+    }
+  }
+
+  
+  /* Parte 11: Ajustes visuales del Hero */
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-overlay p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive hero */
+  @media (max-width: 768px) {
+    .hero {
+      height: 70vh;
+      padding: 40px 20px;
+    }
+  
+    .hero-overlay {
+      padding: 20px;
+    }
+  
+    .hero-overlay h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-overlay p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Botón del Hero */
+.btn-hero {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #0077cc;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-hero:hover {
+    background-color: #005fa3;
+  }
+
+  
+  /* Parte 12: Ajustes generales para secciones */
+
+section {
+    padding: 60px 20px;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #222;
+  }
+  
+  @media (max-width: 768px) {
+    /* Ajustes para tarjetas de proyectos */
+    .tarjetas-proyectos {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tarjeta {
+      width: 90%;
+    }
+  
+    /* Ajustes para sección Nosotros */
+    .nosotros-contenido {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nosotros-texto,
+    .nosotros-img {
+      width: 100%;
+    }
+  
+    /* Ajustes para sección Prensa */
+    .galeria-prensa {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nota {
+      width: 90%;
+    }
+  }
+  
+
+  /* Parte 13: Ajustes responsivos del footer */
+
+@media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-info,
+    .footer-redes {
+      width: 100%;
+    }
+  
+    .footer-info h3,
+    .footer-redes h3 {
+      text-align: center;
+    }
+  
+    .redes-links a {
+      margin: 0 10px;
+    }
+  }
+  
+
+  /* Parte 14: Ajustes generales para celulares */
+
+@media (max-width: 480px) {
+    /* Títulos más chicos en celular chico */
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    /* Parrafos con mejor espaciado */
+    p {
+      font-size: 0.95rem;
+    }
+  
+    /* Botón del hero más compacto */
+    .btn-hero {
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+  
+    /* Footer más compacto */
+    .footer-copy {
+      font-size: 0.7rem;
+    }
+  
+    .menu-toggle {
+      font-size: 28px;
+    }
+  }
+  
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Animaciones al hacer scroll */
+.animar {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
