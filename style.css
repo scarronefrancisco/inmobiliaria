@@ -1,9 +1,12 @@
 /* Parte 2: Header */
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
   }
+  
   
   .site-header {
     background-color: #fff;
@@ -329,6 +332,11 @@ body {
     font-size: 0.8rem;
     color: #aaa;
   }
+
+  .site-footer h3 {
+  color: #fff;
+}
+
   
 
   /* Parte 9: Estilos base */
@@ -338,14 +346,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Tipografía general */
-  body {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-    background-color: #fff;
-    line-height: 1.6;
   }
   
   /* Enlaces */
@@ -360,9 +360,23 @@ body {
   
   /* Títulos */
   h1, h2, h3, h4 {
-    font-weight: 700;
+    font-family: 'Rubik', sans-serif;
     color: #111;
   }
+  
+  h1 {
+    font-weight: 600;
+  }
+  
+  h2, h3 {
+    font-weight: 500;
+  }
+  
+  p, li, a {
+    font-weight: 300;
+  }
+  
+  
   
   /* Contenedor general */
   .container {
@@ -419,11 +433,15 @@ body {
   /* Parte 11: Ajustes visuales del Hero */
 
 .hero-overlay h1 {
-    font-size: 3rem;
+    color: hsl(63, 78%, 91%);
+    font-size: 3.5rem;
     margin-bottom: 20px;
+    letter-spacing: 0.45em;
+    font-weight: 100;
   }
   
   .hero-overlay p {
+    color: #fff;
     font-size: 1.25rem;
     max-width: 700px;
     margin: 0 auto;
@@ -476,8 +494,9 @@ section {
     font-size: 2rem;
     margin-bottom: 40px;
     text-align: center;
-    color: #222;
+    color: inherit;
   }
+  
   
   @media (max-width: 768px) {
     /* Ajustes para tarjetas de proyectos */
